@@ -5,20 +5,19 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const DashboardCard = ({ title, total, yesterday, percentage, icon }) => (
   <div className="bg-blue-200 rounded-lg p-4 shadow-md">
-    <div className="flex items-center mb-4">
-      <div className="text-3xl mr-4">{icon}</div>
-      <div>
-        <div className="text-lg font-bold">{title}</div>
-        <div className="text-gray-700">{total} Total</div>
-      </div>
+    <div className="flex items-center justify-between">
+      <div className="text-3xl">{icon}</div>
+      <div className="text-lg font-bold">{title}</div>
     </div>
-    <div className="flex justify-between text-gray-700">
-      <div>{yesterday} Yesterday</div>
-      <div>({percentage})</div>
+    <div className="mt-4">
+      <div className="text-lg font-bold">{total} Total</div>
+      <div className="flex items-center mt-2 text-gray-700">
+        <div className="mr-4">{yesterday} Yesterday</div>
+        <div>({percentage})</div>
+      </div>
     </div>
   </div>
 );
-
 
 
 
